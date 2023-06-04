@@ -1,0 +1,31 @@
+h1{
+    padding: 10px 20px 30px 40px;
+    border: 2px solid red;
+    border-left: 4px solid blue;
+    margin: 20px 10px 30px 40px;
+    box-shadow: 5px 5px 10px blue;
+}
+
+div{
+    border: 2px solid orange;
+    width: 20%;
+    /*display: inline-block;*/
+}
+
+.dos{
+    position: relative;
+    left: 150px;
+    top: -22px;
+}
+
+.tres{
+    position: fixed;
+    background-color: red;
+    left: 400px;
+    top: 400px;
+}
+
+.cuatro{
+    position: absolute;
+    background-color: blue;
+}

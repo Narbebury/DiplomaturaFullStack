@@ -1,0 +1,104 @@
+$bgcolor:black;
+$titulos: red;
+$colorinfo: yellow;
+$sizeinfo: 14px;
+$colortext: white;
+$sizetext:14px;
+$colorcards: lighten $bgcolor;
+$fontfamily: 'Big Shoulders Inline Text', cursive;
+$imagevw: 236px;
+$imagew: 354px;
+body{background-color: $bgcolor;}
+.stitulo{ color:$titulos; 
+text-align: center; 
+font-family: $fontfamily;}
+#titulo{@extend .stitulo;
+font-family: $fontfamily;
+background-color: $bgcolor; 
+position: fixed;
+top:0px; 
+width: 100%;   
+height: 60px;
+}
+h1{
+@extend .stitulo;
+font-size: 50px;
+margin-top: 0px;
+background-color: black;
+top:0px;}
+.generos{color:$colortext; text-align: center;font-family: $fontfamily;}
+.copyright { color:$titulos;text-align: center;font-family: $fontfamily;}
+.linkeos{background-color: $bgcolor; color:$titulos;font-family: $fontfamily;}
+.linkeos ul{display:flex; list-style: none;margin-top:60px;}
+a{color:$titulos; text-decoration: none;margin-right: 40px;}
+/* CARDS */
+.card {  display: grid;
+  margin-left: 1rem;
+  grid-template-columns:repeat(auto-fill, minmax(236px, 236px));
+  grid-template-rows: 450px;
+  gap: 6rem;
+  grid-auto-flow: row;
+  width: 100%;
+  background-color: $bgcolor;
+}
+.card div{ color:$colortext ;}
+.lupa{  text-align: right;
+  margin-right: 20px;
+  margin-top: -20px;}
+b{color:$colorinfo}
+.boton2{align-self: right;
+border-radius: 50%;
+background-color: $titulos;
+border: none;}
+ /*  card_detalis */
+  .cards_details { margin-top: 70px;
+    margin-bottom: 60px;
+    font-family: $fontfamily;
+    display: grid;
+    grid-template-columns: 410px 100px 350px;
+    grid-template-rows: 1fr 1fr 1fr 1.2fr  1fr 1fr 1fr;
+    grid-auto-rows: 1fr; 
+    gap: 0.5px 1px;
+    grid-auto-flow: column; 
+    justify-content: center;
+    align-content: stretch;
+    justify-items: stretch;
+    grid-template-areas:
+      "fotopeli_d categoria categoria_detalle"
+      "fotopeli_d genero genero_detalle"
+      "fotopeli_d resumen resumen_detalle"
+      "fotopeli_d resumen resumen_detalle"
+      "fotopeli_d duracion duracion_detalle"
+      "fotopeli_d reparto reparto_detalle"
+      "fotopeli_d reparto reparto_detalle";
+    width: 100%;
+    height: 400px;
+  }
+  .fotopeli_d { grid-area: fotopeli_d; text-align: center;}
+  .categoria { grid-area: categoria; color:$colorinfo;}
+  .genero { grid-area: genero;color:$colorinfo; }
+  .resumen { grid-area: resumen;color:$colorinfo; }
+  .duracion { grid-area: duracion;color:$colorinfo; }
+  .reparto { grid-area: reparto;color:$colorinfo; }
+  .reparto_detalle { grid-area: reparto_detalle;color:$colortext; }
+  .duracion_detalle { grid-area: duracion_detalle;color:$colortext; }
+  .resumen_detalle { grid-area: resumen_detalle; color:$colortext; max-height: 100px;}
+  .genero_detalle { grid-area: genero_detalle; color:$colortext;}
+  .categoria_detalle { grid-area: categoria_detalle; color:$colortext;}
+
+@media (max-width: 700px) {
+.cards_details{display:inline-block;
+  position:relative;
+  margin-left: 5px;
+  height: 100%;}
+#titulo{display:inline-block;
+  position:sticky;
+  background-color: black;
+  top:0px;
+  width: 100%;
+  height: 60px;
+  z-index: 999;}}
+@media (max-width: 400px) {
+.linkeos ul{display: block;
+  text-align: center;}  
+}
