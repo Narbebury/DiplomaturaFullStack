@@ -1,10 +1,12 @@
 body {
-  background-color: black; }
+  background-color: black;
+}
 
-.stitulo, #titulo, h1 {
+.stitulo, h1, #titulo {
   color: red;
   text-align: center;
-  font-family: "Big Shoulders Inline Text", cursive; }
+  font-family: "Big Shoulders Inline Text", cursive;
+}
 
 #titulo {
   font-family: "Big Shoulders Inline Text", cursive;
@@ -12,67 +14,78 @@ body {
   position: fixed;
   top: 0px;
   width: 100%;
-  height: 60px; }
+  height: 60px;
+}
 
 h1 {
   font-size: 50px;
   margin-top: 0px;
   background-color: black;
-  top: 0px; }
+  top: 0px;
+}
 
 .generos {
   color: white;
   text-align: center;
-  font-family: "Big Shoulders Inline Text", cursive; }
+  font-family: "Big Shoulders Inline Text", cursive;
+}
 
 .copyright {
   color: red;
   text-align: center;
-  font-family: "Big Shoulders Inline Text", cursive; }
+  font-family: "Big Shoulders Inline Text", cursive;
+}
 
 .linkeos {
   background-color: black;
   color: red;
-  font-family: "Big Shoulders Inline Text", cursive; }
+  font-family: "Big Shoulders Inline Text", cursive;
+}
 
 .linkeos ul {
   display: flex;
   list-style: none;
-  margin-top: 60px; }
+  margin-top: 60px;
+}
 
 a {
   color: red;
   text-decoration: none;
-  margin-right: 40px; }
+  margin-right: 40px;
+}
 
 /* CARDS */
 .card {
   display: grid;
   margin-left: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(236px, 236px));
-  grid-template-rows: 410px;
+  grid-template-rows: 450px;
   gap: 6rem;
   grid-auto-flow: row;
   width: 100%;
-  background-color: black; }
-  .card div:hover{box-shadow:rgba(211, 212, 186, 0.876) 0px 8px 24px;}
+  background-color: black;
+}
 
 .card div {
-  color: white; }
+  color: white;
+}
 
 .lupa {
   text-align: right;
   margin-right: 20px;
-  margin-top: -20px; }
+  margin-top: -20px;
+}
 
 b {
-  color: yellow; }
+  color: yellow;
+}
 
 .boton2 {
   align-self: right;
   border-radius: 50%;
   background-color: red;
-  border: none; }
+  border: none;
+}
 
 /*  card_detalis */
 .cards_details {
@@ -81,7 +94,7 @@ b {
   font-family: "Big Shoulders Inline Text", cursive;
   display: grid;
   grid-template-columns: 410px 100px 350px;
-  grid-template-rows: 1fr 1fr 1fr 1.2fr  1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1.2fr 1fr 1fr 1fr;
   grid-auto-rows: 1fr;
   gap: 0.5px 1px;
   grid-auto-flow: column;
@@ -90,61 +103,72 @@ b {
   justify-items: stretch;
   grid-template-areas: "fotopeli_d categoria categoria_detalle" "fotopeli_d genero genero_detalle" "fotopeli_d resumen resumen_detalle" "fotopeli_d resumen resumen_detalle" "fotopeli_d duracion duracion_detalle" "fotopeli_d reparto reparto_detalle" "fotopeli_d reparto reparto_detalle";
   width: 100%;
-  height: 400px; }
+  height: 400px;
+}
+
 .fotopeli_d {
   grid-area: fotopeli_d;
-  text-align: center; }
-  .fotopeli_d :hover {
-    transform: scale(1.4); 
-  }
+  text-align: center;
+}
+
 .categoria {
   grid-area: categoria;
-  color: yellow; }
+  color: yellow;
+}
 
 .genero {
   grid-area: genero;
-  color: yellow; }
+  color: yellow;
+}
 
 .resumen {
   grid-area: resumen;
-  color: yellow; }
+  color: yellow;
+}
 
 .duracion {
   grid-area: duracion;
-  color: yellow; }
+  color: yellow;
+}
 
 .reparto {
   grid-area: reparto;
-  color: yellow; }
+  color: yellow;
+}
 
 .reparto_detalle {
   grid-area: reparto_detalle;
-  color: white; }
+  color: white;
+}
 
 .duracion_detalle {
   grid-area: duracion_detalle;
-  color: white; }
+  color: white;
+}
 
 .resumen_detalle {
   grid-area: resumen_detalle;
   color: white;
-  max-height: 100px; }
+  max-height: 100px;
+}
 
 .genero_detalle {
   grid-area: genero_detalle;
-  color: white; }
+  color: white;
+}
 
 .categoria_detalle {
   grid-area: categoria_detalle;
-  color: white; }
+  color: white;
+}
 
 @media (max-width: 700px) {
   .cards_details {
     display: inline-block;
     position: relative;
     margin-left: 5px;
-    height: 100%; }
-
+    height: 100%;
+  }
   #titulo {
     display: inline-block;
     position: sticky;
@@ -152,8 +176,12 @@ b {
     top: 0px;
     width: 100%;
     height: 60px;
-    z-index: 999; } }
+    z-index: 999;
+  }
+}
 @media (max-width: 400px) {
   .linkeos ul {
     display: block;
-    text-align: center; } }
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

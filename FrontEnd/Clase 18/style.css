@@ -1,0 +1,29 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.grid-item{
+    background-color: #e4920f;
+    border: 2px red solid;
+}
+
+@media (width < 768){
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+    .grid-item{
+        background-color: blue;
+    }
+    .grid-item:last-child{
+        display: none;
+    }
+}
+
+/* TABLET */
+@media (max-width: 768) and (max-width:992px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}

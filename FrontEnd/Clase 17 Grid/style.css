@@ -1,0 +1,40 @@
+main *{
+    background-color: blue;
+    padding: 10px;
+    font-size: 3em;
+}
+
+main {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+    "header header header"
+    "izquierda"
+    "contenido"
+    "derecha"
+    "footer footer footer";
+}
+
+@media screen(min:width:500px){
+
+}
+
+header{
+    grid-area: header;
+}
+
+aside:first-of-type{
+    grid-area: izquoerda;
+}
+
+article{
+    grid-area: contenido;
+}
+
+Aside:last-of-type{
+    grid-area: derecha;
+}
+
+footer{
+    grid-area: footer;
+}
