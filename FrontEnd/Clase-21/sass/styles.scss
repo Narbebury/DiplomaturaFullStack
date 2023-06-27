@@ -1,0 +1,84 @@
+//variables
+
+$primary-color: blue;
+$font-family: "Arial", sans-serif;
+$container-width: 1200px;
+$padding-small: 10px;
+$padding-medium: 20px;
+
+body {
+    font-family: $font-family;
+}
+
+.container{
+    h1{
+        color: $primary-color;
+    }
+}
+
+//Maps
+$primary: (
+    background-color: $primary-color,
+    color: #fff,
+    padding: $padding-small,
+    border-radius: 5px
+);
+
+$secondary: (
+    background-color: #fff,
+    color: $primary-color,
+    padding:$padding-medium,
+    border-radius: 5px,
+    border: 1px solid $primary-color
+);
+
+//extend
+%element-grid{
+    border: 1px solid #ccc;
+    padding:10px;
+    color: #333;
+}
+
+//mixin
+@mixin grid($colums){
+    display: grid;
+    grid-template-columns: repeat($colums,1fr);
+    gap: $padding-medium;
+}
+
+//Implementacion de map
+.button-primary{
+    background-color: map-get($primary , $primary-color );
+    color: map-get($primary , color );
+    padding: map-get($primary , padding );
+    border-radius: map-get($primary , border-radius );
+}
+
+.button-secondary{
+    background-color: map-get($secondary , $primary-color );
+    color: map-get($secondary , color );
+    padding: map-get($primary , padding );
+    border-radius: map-get($secondary , border-radius );
+    border: map-get($secondary , border );
+}
+
+//Implementación de extend
+
+.element1{
+    @extend %element-grid;
+}
+
+.element2{
+    @extend %element-grid;
+    border-color: green;
+}
+
+.element3{
+    @extend %element-grid;
+    border-color: red;
+}
+
+//Implementación de mixin
+.grid-container{
+    @include grid(3);
+}

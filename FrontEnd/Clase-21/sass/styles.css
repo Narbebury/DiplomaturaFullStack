@@ -1,0 +1,40 @@
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.container h1 {
+  color: blue;
+}
+
+.element3, .element2, .element1 {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.button-primary {
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button-secondary {
+  color: blue;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid blue;
+}
+
+.element2 {
+  border-color: green;
+}
+
+.element3 {
+  border-color: red;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}/*# sourceMappingURL=styles.css.map */

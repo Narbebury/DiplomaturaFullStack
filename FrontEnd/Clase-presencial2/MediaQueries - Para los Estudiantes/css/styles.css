@@ -1,0 +1,147 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300italic,Roboto:400,400italic,500,500italic,600,600italic,700,700italic,800,800italic');
+
+html {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+main {
+    padding-top: 90px;
+}
+
+.navbar {
+    display: flex;
+    border: 1px solid lightgray;
+    background-color: white;
+    display: inline;
+    position: fixed;
+    padding: 0px;
+    height: 80px;
+    width: 100%;
+}
+
+.navbar .nav-logo {
+    padding-top: 6px;
+    width: 140px;
+    float: left;
+}
+
+.navbar .menu {
+    padding-top: 24px;
+    float: right;
+}
+
+.navbar .menu li {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-right: 20px;
+    font-size: large;
+    font-weight: 800;
+    padding-top: 20%;
+    display: inline;
+}
+
+.menu-sandwich {
+    cursor: pointer;
+    float: right;
+    padding: 22px;
+    display: none;
+}
+
+/*        MANEJO DE MEDIA QUERIES PARA LAS DIFERENTES PANTALLAS        */
+
+/* DENTRO DE ESTE APARTADO, DEBERÁS CUMPLIMENTAR LA CONSIGNA PLANTEADA */
+@media only screen and (min-width: 1200px){
+    .navbar .menu li {
+        padding-right: 16px;
+    }
+    main{
+        background-color: whitesmoke;
+        font-weight: 800;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 900px){
+    .navbar .menu li {
+        padding-right: 14px;
+    }
+    main{
+        background-color: lightgreen;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 900px)and (min-width: 768px){
+    .navbar .menu li {
+        padding-right: 12px;
+    }
+    main{
+        background-color: lightpink;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width:481px){
+    .navbar .menu li {
+        padding-right: 8px;
+    }
+    .navbar .nav-logo{
+        width: 120px;
+    }
+    main{
+        background-color: lightsteelblue;
+        font-weight: 400;
+    }
+}
+
+/* ESTRUCTURA A INCORPORAR EN EL MENÚ MOBILE*/
+@media screen and (max-width:480px){
+    .menu-sandwich {
+        display: block;
+    }
+    .container {
+        z-index: -1;
+        color: black;
+    }
+
+    .navbar .menu {
+        background-color: gray;
+        color: whitesmoke;
+        text-align: center;
+        margin-top: -11px;
+        padding: 10px;
+        width: 100%;
+        height: 140px;
+        opacity: 0;
+    }
+
+    .navbar .menu li {
+        font-weight: 300;
+        display: block;
+        padding: 3px;
+    }
+    body {
+        background-color: lightsalmon;
+    }  
+}
+
+
+/* ANIMAMOS EL MENÚ SANDWICH AL HACER CLIC/TAP SOBRE EL MISMO */
+.menu-desplegado {
+    animation: menu-desplegado 0.35s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@keyframes menu-desplegado {
+    0% {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1;
+    }
+}
