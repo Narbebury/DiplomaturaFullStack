@@ -1,0 +1,12 @@
+Hola Profe: este es un ejemplo de la conexión al clúster MongoDB que utilicé para abordar el proyecto. Dicha cadena de conexión la podés encontrar en MongoDB Compass.
+
+Recordá que las diapositivas estaban pensadas para que los estudiantes construyan un Clúster con MongoDB, y experimenten lo que es crear y trabajar con proyectos en nube.
+
+El proyecto está creado a partir de un archivo .env, y este tipo de archivos no suele transferirse en todos los casos. Si al descargar este códigod de ejemplo, no se encuentra el archivo .env, por favor crealo de forma manual. 
+
+Luego, reemplazá con tu propia cadena de conexión el modelo que aquí te dejo, y copia todo lo de aquí abajo al archivo .env de este proyecto.
+
+Luego asegurate de que exista la bb.dd. 'frutas' y la Colección 'frutas' para que todo fluya naturalmente.
+
+PORT=3008
+MONGODB_URLSTRING=mongodb+srv://<usuario_mongodb_atlas>:<password_mongodb_atlas>@<database>.uya7fjp.mongodb.net/?retryWrites=true&w=majority
